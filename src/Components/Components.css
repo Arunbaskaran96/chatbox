@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topbar-container{
+    background-color: black;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+.logo-container{
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 15px;
+}
+.your-logo{
+    color: red;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topbar-bio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    margin-top: 10px;
+}
+
+
+li{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+
+.about,.skills,.projects,.experiences,.btn{
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 1s;
+}
+
+.about:hover,.skills:hover,.projects:hover,.experiences:hover,.btn:hover{
+    color: red;
+    background-color: black;
+    transform: scale(1.2);
+}
+.bio{
+    margin-top: 10px;
+    color: rgb(236, 229, 229);
+}
+
+
+
+.mobile-menu-icon{
+    display: none;
+}
+
+@media screen and (max-width:950px){
+    .bio{
+        font-size: 20px;
+    }
+    .topbar-bio{
+        width: 80%;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-links-mobile{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: black;
+        width: 100%;
+        right: 0;
+        top: 53.4px;
+        transition: all 0.5s ease-out;
+    }
+    .about,.skills,.projects,.experiences{
+        color: wheat;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+    .btn{
+        color: wheat;
+        text-align: center;
+        margin-left: 45px;
+    }
+    .mobile-menu-icon{
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        background-color: gold;
+        outline: none;
+        top: 1px;
+        right: 10px;
+    }
+}
