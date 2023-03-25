@@ -18,7 +18,7 @@ function Messages() {
 
   const getMessages=async()=>{
     try {
-      const message=await axios.get(`http://localhost:8000/messages/${params.id}`,{
+      const message=await axios.get(`https://forgotpassword-g94p.onrender.com/messages/${params.id}`,{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }
@@ -39,7 +39,7 @@ function Messages() {
     onSubmit:async(value)=>{
       try {
         setDisable(true)
-        await axios.post(`http://localhost:8000/message/${params.id}`,value,{
+        await axios.post(`https://forgotpassword-g94p.onrender.com/message/${params.id}`,value,{
           headers:{
             Authorization:`${window.localStorage.getItem("token")}`
           }

@@ -13,7 +13,7 @@ function Users() {
 
   const getUsers=async()=>{
     try {
-      const user=await axios.get("http://localhost:8000/users",{
+      const user=await axios.get("https://forgotpassword-g94p.onrender.com/users",{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }
@@ -27,7 +27,7 @@ function Users() {
   const addFriend=async(item)=>{
     setDisable(true)
     try {
-      await axios.post(`http://localhost:8000/addfriend/${item._id}`,item,{
+      await axios.post(`https://forgotpassword-g94p.onrender.com/addfriend/${item._id}`,item,{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }

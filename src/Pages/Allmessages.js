@@ -15,7 +15,7 @@ function Allmessages() {
 
     const getFriends=async()=>{
         try {
-            const friend=await axios.get("http://localhost:8000/friendslist",{
+            const friend=await axios.get("https://forgotpassword-g94p.onrender.com/friendslist",{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }
@@ -28,14 +28,14 @@ function Allmessages() {
     }
     const chat=async(item)=>{
         try {
-            const user=await axios.get(`http://localhost:8000/messages/${item.friendid._id}`,{
+            const user=await axios.get(`https://forgotpassword-g94p.onrender.com/messages/${item.friendid._id}`,{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }
             })
             setCurruser(user.data)
             console.log(user.data)
-            const findUser=await axios.get(`http://localhost:8000/user/${item.friendid._id}`,{
+            const findUser=await axios.get(`https://forgotpassword-g94p.onrender.com/user/${item.friendid._id}`,{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }
@@ -49,7 +49,7 @@ function Allmessages() {
 
     const chatting=async(currentUser)=>{
         try {
-            await axios.post(`http://localhost:8000/message/${currentUser._id}`,{
+            await axios.post(`https://forgotpassword-g94p.onrender.com/message/${currentUser._id}`,{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }

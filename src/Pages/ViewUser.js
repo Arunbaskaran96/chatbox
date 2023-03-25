@@ -12,7 +12,7 @@ function ViewUser() {
 
   const getUser=async()=>{
     try {
-      const person=await axios.get(`http://localhost:8000/user/${params.id}`,{
+      const person=await axios.get(`https://forgotpassword-g94p.onrender.com/user/${params.id}`,{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }

@@ -11,7 +11,7 @@ function Friends() {
   },[])
 
   const getFriends=async()=>{
-    const friend=await axios.get("http://localhost:8000/friendslist",{
+    const friend=await axios.get("https://forgotpassword-g94p.onrender.com/friendslist",{
       headers:{
         Authorization:`${window.localStorage.getItem("token")}`
       }
@@ -23,7 +23,7 @@ function Friends() {
   const Remove=async(item)=>{
     try {
       setDisable(true)
-      await axios.delete(`http://localhost:8000/remove/${item._id}`,{
+      await axios.delete(`https://forgotpassword-g94p.onrender.com/remove/${item._id}`,{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }
