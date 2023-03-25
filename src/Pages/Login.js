@@ -26,7 +26,7 @@ function Login() {
     onSubmit:async(value)=>{
       try {
         setDisable(true)
-        const user=await axios.post("http://localhost:8000/login",value)
+        const user=await axios.post("https://forgotpassword-g94p.onrender.com/login",value)
         window.localStorage.setItem("token",user.data.token)
         nav("/topbar/friends")
       } catch (error) {
