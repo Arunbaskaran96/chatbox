@@ -62,7 +62,7 @@ function Messages() {
       </div>
       <div className='row'>
         <div className='col-3'></div>
-        <div className='col-6   '>
+        <div className='col-6 chat-container'>
           {
             msg.length>0?msg.map((item)=>{
               return(

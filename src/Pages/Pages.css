@@ -239,6 +239,13 @@
     overflow-y: scroll;
     height: 60vh;
 }
+.chat-all-container{
+    box-shadow: 5px 5px 5px 5px whitesmoke;
+    border-radius: 30px;
+    padding: 25px;
+    overflow-y: scroll;
+    height: 70vh;
+}
 
 .user-name{
     font-size: 25px;
@@ -281,4 +288,20 @@
 .chatuser-container:hover{
     transform: scale(1.2);
     transition: 1s;
+}
+
+.chat-heading{
+    font-size: 25px;
+    font-style: italic;
+}
+
+.messages-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.chat-bef{
+    font-size: 15px;
+    margin-left: 150px;
 }

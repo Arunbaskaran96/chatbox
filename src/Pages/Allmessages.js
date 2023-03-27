@@ -35,7 +35,7 @@ function Allmessages() {
             })
             setCurruser(user.data)
             console.log(user.data)
-            const findUser=await axios.get(`https://forgotpassword-g94p.onrender.com/user/${item.friendid._id}`,{
+            const findUser=await axios.get(`http://localhost:8000/user/${item.friendid._id}`,{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }
@@ -98,15 +98,20 @@ function Allmessages() {
                     }
                 </div>
             </div>
-            <div className='col-5'>
-                <div className='row'>
-                    Chat Area
+            <div className='col-7'>
+                <div className='row '>
+                    <div className='col-12 text-center'>
+                        <h5 className='chat-heading'>Chat Area</h5>
+                    </div>
                 </div>
                 <div className='row'>
                 {
-                    curruser.length===0?(<div>no conversation</div>
+                    curruser.length===0?(
+                    <div className='messages-container'>
+                        <p className='chat-bef'>Click any one of  your friend name,Then only you can the message</p>   
+                    </div>
                     ):(
-                    <div className='col-12 '>
+                    <div className='col-12  chat-all-container'>
                         {
                             curruser.map((item)=>{
                                 return(
@@ -123,6 +128,30 @@ function Allmessages() {
                     </div>
                     )
                 }
+                </div>
+                <div className='row'>
+                    {/* {
+                        currentUser.length>0?(
+                            currentUser.map((item)=>{
+                                return(
+                                    <div className='col-12 text-center'>
+                                        <p>Do you want to chat with him?</p>
+                                        <Link to={`topbar/messages/${item._id}`} className='btn btn-success'>Click here</Link>        
+                                    </div>
+                                )
+                            })
+                        ):(
+                            <div></div>
+                        )
+                    } */}
+                    {
+                        currentUser===null?<div></div>:(
+                            <div className='text-center'>
+                                <p>Do you want to chat with him?</p>
+                                <Link to={`/topbar/messages/${currentUser._id}`} className='btn btn-success'>Click here</Link>
+                            </div>
+                        )
+                    }
                 </div>
 
             </div>
