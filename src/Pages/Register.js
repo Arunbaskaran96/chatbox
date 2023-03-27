@@ -42,7 +42,7 @@ function Register() {
     },
     onSubmit:async(value)=>{
       try {
-        await axios.post("https://forgotpassword-g94p.onrender.com/register",value)
+        await axios.post("https://forgotpassword-g94p.onrender.com",value)
         alert("Suceessfully created")
         nav("/")
       } catch (error) {
