@@ -56,7 +56,7 @@ function Profile() {
     onSubmit:async(value)=>{
       try {
         setDisable(true)
-        await axios.put("http://localhost:8000/user",value,{
+        await axios.put("https://forgotpassword-g94p.onrender.com/user",value,{
           headers:{
             Authorization:`${window.localStorage.getItem("token")}`
           }
