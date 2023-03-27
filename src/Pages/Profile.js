@@ -13,7 +13,7 @@ function Profile() {
 
   const getUser=async()=>{
     try {
-      const person=await axios.get("https://forgotpassword-g94p.onrender.com/user",{
+      const person=await axios.get("http://localhost:8000/user",{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }
@@ -56,14 +56,14 @@ function Profile() {
     onSubmit:async(value)=>{
       try {
         setDisable(true)
-        await axios.put("https://forgotpassword-g94p.onrender.com/user",value,{
+        await axios.put("http://localhost:8000/user",value,{
           headers:{
             Authorization:`${window.localStorage.getItem("token")}`
           }
         })
         alert("Successfully Edited")
         setDisable(false)
-        nav("/topbar/home")
+        nav("/topbar/friends")
       } catch (error) {
         setDisable(false)
         console.log(error)
