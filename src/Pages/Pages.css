@@ -305,3 +305,15 @@
     font-size: 15px;
     margin-left: 150px;
 }
+
+.forgot-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.forgot-mini{
+    padding: 40px;
+    box-shadow: 10px 10px 10px black;
+    background-color: whitesmoke;
+}

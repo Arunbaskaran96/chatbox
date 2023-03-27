@@ -72,7 +72,7 @@ function Login() {
             </div>
             <div className='row'>
               <div className='col-12 text-center'>
-              <Link style={{textDecoration:"none"}} to="/topbar/home" className='forgot-button' type="submit" value="Forgot-password">Forgot Password</Link><br/>
+              <Link style={{textDecoration:"none"}} to="/forgot-password" className='forgot-button' type="submit" value="Forgot-password">Forgot Password</Link><br/>
               </div>
             </div>
             <div className='row' style={{marginTop:"100px"}}>
