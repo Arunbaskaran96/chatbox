@@ -34,14 +34,14 @@ function Allmessages() {
                 }
             })
             setCurruser(user.data)
-            console.log(user.data)
-            const findUser=await axios.get(`http://localhost:8000/user/${item.friendid._id}`,{
+            // console.log(user.data)
+            const findUser=await axios.get(`https://forgotpassword-g94p.onrender.com/user/${item.friendid._id}`,{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }
             })
             setCurrentuser(findUser.data)
-            console.log(findUser.data)
+            // console.log(findUser.data)
         } catch (error) {
             console.log(error)
         }

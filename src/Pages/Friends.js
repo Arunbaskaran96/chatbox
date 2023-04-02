@@ -17,7 +17,7 @@ function Friends() {
       }
     })
     setUsers(friend.data)
-    console.log(friend.data)
+    // console.log(friend.data)
   }
 
   const Remove=async(item)=>{

@@ -24,8 +24,8 @@ function Messages() {
         }
       })
       setMsg(message.data)
-      console.log(message.data)
-      console.log(message.data)
+      // console.log(message.data)
+      // console.log(message.data)
     } catch (error) {
       console.log(error)
     }
