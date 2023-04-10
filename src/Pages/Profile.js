@@ -13,7 +13,7 @@ function Profile() {
 
   const getUser=async()=>{
     try {
-      const person=await axios.get("http://localhost:8000/user",{
+      const person=await axios.get("https://forgotpassword-g94p.onrender.com/user",{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }
