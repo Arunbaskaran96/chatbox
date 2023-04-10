@@ -82,9 +82,6 @@ function Profile() {
             <label className='reg-lbl'>Email</label><br/>
             <input className='reg-int' name='email' value={formik.values.email} onChange={formik.handleChange}></input><br/>
             <span style={{color:"red"}}>{formik.errors.email}</span><br/>
-            <label className='reg-lbl'>Password</label><br/>
-            <input className='reg-int' name='password' value={formik.values.password} onChange={formik.handleChange}></input><br/>
-            <span style={{color:"red"}}>{formik.errors.password}</span><br/>
           </div>
           <div className='reg-rightside'>
             <label className='reg-lbl'>Mobile</label><br/>
